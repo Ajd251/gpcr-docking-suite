@@ -1,0 +1,33 @@
+# Conda environment for the GPCR Docking & Analytics Suite.
+#   conda env create -f environment.yml
+#   conda activate gpcr-docking
+#
+# Version floors are the versions the pipeline was developed and tested against.
+# Optional extras (not installed here; see README):
+#   - hydrated (AD4 water-model) docking: autogrid4 + prepare_receptor4.py
+#   - MM/PBSA + MM/GBSA rescoring:        AmberTools (conda-forge `ambertools`)
+name: gpcr-docking
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy>=2.2
+  - scipy>=1.15
+  - pandas>=2.3
+  - rdkit>=2024.03
+  - openbabel>=3.1.1        # provides `obabel` and the Python bindings PLIP needs
+  - vina>=1.2.7             # AutoDock Vina Python bindings
+  - plip>=3.0
+  - gemmi>=0.7
+  - networkx>=3.4
+  - requests>=2.33
+  - pip
+  - pip:
+      - meeko>=0.7.1,<0.8   # ligand PDBQT + explicit-water hydration
+      - pdb2pqr>=3.6.2      # receptor protonation (with PROPKA)
+      - propka>=3.5.1
+      - streamlit>=1.57
+      - plotly>=6.7,<7
+      - py3Dmol>=2.5.4
+      - stmol>=0.0.9
+      - streamlit-agraph>=0.0.45

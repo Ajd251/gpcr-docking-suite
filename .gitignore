@@ -1,0 +1,51 @@
+# macOS
+.DS_Store
+
+# Editor / assistant local files
+.claude/
+CLAUDE.md
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Working data and outputs (created at runtime by src/paths.py; never committed)
+/data/
+/results/
+/scratch/
+/docs/
+
+# Generated docking artifacts (written relative to the working directory)
+*_docking_results/
+*_validation/
+batch_validation/
+*_Screen_Results.csv
+*_MMPBSA.csv
+*_ranked.csv
+*_poses_scored.csv
+*_Master_Overlay.pml
+
+# Fetched / prepared receptor structures and intermediates
+*_raw.pdb
+*_local.pdb
+*_refined.pdb
+*.pdbqt
+*.pqr
+
+# Hydrated (AD4) docking: autogrid4 grids and intermediates
+*.map
+*.fld
+*.gpf
+*.glg
+*.xyz
+*_protonated.pdb
+*.log
+
+# Loose temp / reference files written to the repo root
+/temp_*
+/reference_*
+/validation_*

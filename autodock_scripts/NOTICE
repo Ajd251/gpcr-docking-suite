@@ -1,0 +1,14 @@
+The scripts in this directory are vendored, unmodified, from the AutoDock Vina
+project (https://github.com/ccsb-scripps/AutoDock-Vina, example/autodock_scripts/):
+
+  mapwater.py  - derives the water (W) affinity map from the OA and HD maps
+  dry.py       - scores and filters the explicit waters of a docked pose
+
+AutoDock Vina is distributed under the Apache License, Version 2.0
+(https://www.apache.org/licenses/LICENSE-2.0), which is compatible with the
+GPL-3.0 licence of the rest of this repository.
+
+The hydrated-docking method they implement is described in:
+  Forli S. & Olson A. J. (2012). A force field with discrete displaceable waters
+  and desolvation entropy for hydrated ligand docking. J. Med. Chem. 55, 623-638.
+  https://doi.org/10.1021/jm2005145
